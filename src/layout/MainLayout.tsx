@@ -7,7 +7,7 @@ interface Props{
 }
 
 export default function MainLayout({children}:Props) {
-  return <div>
+  return <div className="relative">
     <Header></Header>
     {children}
     <Footer>
