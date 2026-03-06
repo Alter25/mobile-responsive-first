@@ -12,6 +12,9 @@ export default function Home() {
 					<img src="canasta.png" alt="canasta de abarrotes" className="m-auto not-sm:w-80 md:w-120 lg:w-140" />
 				</section>
 			</div>
+			<div>
+				{/* galeria de productos */}
+			</div>
 		</section>
 	);
 };
