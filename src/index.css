@@ -5,6 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-family-sans: "Open Sans", sans-serif;
+    --font-family-heading: "Montserrat", sans-serif;
+}
+
+@theme inline {
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
     --radius-lg: var(--radius);
@@ -121,4 +126,7 @@
   body {
     @apply bg-background text-foreground;
     }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-family-heading);
+  }
 }
