@@ -1,16 +1,20 @@
-import React from "react";
+import type { GroceryItemType } from "@/types/Types";
+import Card from "./Card";
 
-type elemento = {
-  url: string,
-  name: string,
-}
 
 interface Props {
-  elementos: elemento | elemento[];
+  elementos: GroceryItemType[];
 }
 
 export default function Marquee({ elementos }: Props) {
-  return <article>
-    
+  return <article className="w-full overflow-hidden">
+    <section className="w-[100vw] flex justify-between">
+      {
+        elementos.map((item, index) => {
+          return <Card key={index} name={item.name} imageUrl={item.imageUrl} />
+        })
+      }
+    </section>
+
   </article>
 }
