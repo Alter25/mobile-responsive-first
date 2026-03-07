@@ -14,8 +14,7 @@ export default function Home() {
 					<img src="canasta.png" alt="canasta de abarrotes" className="m-auto not-sm:w-80 not-sm:-translate-x-2 md:w-120 lg:w-140" />
 				</section>
 			</div>
-			<div>
-				{/* galeria de productos */}
+			<div className="w-full">
 				<Marquee elementos={Productos} />
 			</div>
 		</section>

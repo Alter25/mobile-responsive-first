@@ -27,5 +27,17 @@ export const Productos: GroceryItemType[] = [
   {
     name: "rancheritos",
     imageUrl:"/groceryPictures/rancheritos.png"
+  },
+  {
+    name: "leche lala entera",
+    imageUrl:"/groceryPictures/leche lala entera.png"
+  },
+  {
+    name: "nutrileche",
+    imageUrl:"/groceryPictures/nutrileche.png"
+  },
+  {
+    name: "leche lala light",
+    imageUrl:"/groceryPictures/leche lala light.png"
   }
 ]

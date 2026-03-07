@@ -5,7 +5,7 @@ interface Props {
 }
 
 export default function Card({ imageUrl, name }: Props) {
-  return <article>
-    <img className="w-12 sm:w-24" src={imageUrl} alt={name} />
+  return <article className=" w-20 md:w-24 2xl:w-48 flex justify-center items-center mx-16">
+    <img src={imageUrl} alt={name} />
   </article>
 }
