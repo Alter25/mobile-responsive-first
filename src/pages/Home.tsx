@@ -2,6 +2,7 @@ import Marquee from "@/components/Marquee";
 import { Productos } from "@/lib/utils";
 import { WrapperCard } from "@/components/Cards";
 import { Mensajes } from "@/components/data/carrusel";
+import { Footer } from "@/components/Footer";
 
 
 export default function Home() {
@@ -23,12 +24,12 @@ export default function Home() {
 			<div className="w-full flex h-fit py-8 justify-center">
 				{
 					Mensajes.map((item, index) => (
-						<WrapperCard key={index} title={item.content.header} text={item.content.text} />
+						<WrapperCard key={index} title={item.content.header} text={item.content.text} name={item.name} />
 					))
 				}
 				{/* sera que aqui ponga articulos sobre algo? no lo se aun */}
-
 			</div>
+			<Footer />
 		</section>
 	);
 };

@@ -13,13 +13,14 @@ export const Articulo = ({ imageUrl, name }: Props) => {
   </article>
 }
 
-export const WrapperCard = ({ title, text }: Props) => {
+export const WrapperCard = ({ title, text, name }: Props) => {
   return <article className="max-w-2xs bg-slate-500 flex flex-col justify-center items-center mx-2 py-4 border rounded-lg">
     <div className="px-5 py-2 mb-2">
       <h1 className="text-3xl">{title}</h1>
     </div>
-    <div className="p-2">
+    <div className="p-2 m-auto w-[80%]">
       <p className="text-xl">{text}</p>
+      <span className="text-lg font-semibold ">{name}</span>
     </div>
   </article>
 }
