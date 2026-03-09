@@ -9,7 +9,7 @@ interface Props {
 const MarqueeComponent = (Marquee as any).default || Marquee;
 
 export default function MyMarquee({ elementos }: Props) {
-  return <section className="w-screen overflow-hidden bg-amber-500">
+  return <section className="w-screen overflow-hidden bg-amber-500 py-4">
     <MarqueeComponent
       gradient={false}
       gradientColor="white"

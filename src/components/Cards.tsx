@@ -14,7 +14,7 @@ export const Articulo = ({ imageUrl, name }: Props) => {
 }
 
 export const WrapperCard = ({ title, text, name }: Props) => {
-  return <article className="max-w-2xs bg-slate-500 flex flex-col justify-center items-center mx-2 py-4 border rounded-lg">
+  return <article className="max-w-2xs min-w-80 bg-slate-500 flex flex-col justify-center items-center mx-2 py-4 border rounded-lg">
     <div className="px-5 py-2 mb-2">
       <h1 className="text-3xl">{title}</h1>
     </div>
