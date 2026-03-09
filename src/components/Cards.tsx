@@ -1,0 +1,30 @@
+
+interface Props {
+  imageUrl?: string;
+  name?: string;
+  title?: string;
+  text?: string;
+}
+
+
+export const Articulo = ({ imageUrl, name }: Props) => {
+  return <article className=" w-20 md:w-24 2xl:w-48 flex justify-center items-center mx-16">
+    <img src={imageUrl} alt={name} />
+  </article>
+}
+
+export const WrapperCard = ({ title, text }: Props) => {
+  return <article className="max-w-2xs bg-slate-500 flex flex-col justify-center items-center mx-2 py-4 border rounded-lg">
+    <div className="px-5 py-2 mb-2">
+      <h1 className="text-3xl">{title}</h1>
+    </div>
+    <div className="p-2">
+      <p className="text-xl">{text}</p>
+    </div>
+  </article>
+}
+
+
+export default function Card({ imageUrl, name }: Props) {
+  return <Articulo imageUrl={imageUrl} name={name} />
+}

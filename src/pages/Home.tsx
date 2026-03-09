@@ -1,5 +1,8 @@
 import Marquee from "@/components/Marquee";
 import { Productos } from "@/lib/utils";
+import { WrapperCard } from "@/components/Cards";
+import { Mensajes } from "@/components/data/carrusel";
+
 
 export default function Home() {
 	return (
@@ -16,6 +19,15 @@ export default function Home() {
 			</div>
 			<div className="w-full">
 				<Marquee elementos={Productos} />
+			</div>
+			<div className="w-full flex h-fit py-8 justify-center">
+				{
+					Mensajes.map((item, index) => (
+						<WrapperCard key={index} title={item.content.header} text={item.content.text} />
+					))
+				}
+				{/* sera que aqui ponga articulos sobre algo? no lo se aun */}
+
 			</div>
 		</section>
 	);

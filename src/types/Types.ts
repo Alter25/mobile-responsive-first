@@ -6,3 +6,11 @@ export interface GroceryItemType{
 }
 
 type CategoryType = "Lacteos" | "Bebidas" | "Papitas" | "Limpieza";
+
+export interface CarruselCard{
+  name: string;
+  content: {
+    header: string,
+    text: string,
+  }
+}
