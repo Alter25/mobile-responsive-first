@@ -25,7 +25,7 @@ export default function Home() {
 			<div className="w-full">
 				<Marquee elementos={Productos} />
 			</div>
-			<div className="w-full flex not-sm:flex-col h-fit py-8 not-sm:items-center sm:justify-center gap-12 overflow-x-scroll">
+			<div className="w-full flex flex-col md:flex-row h-fit py-8 items-center justify-center gap-12 overflow-x-scroll">
 				{
 					Mensajes.map((item, index) => (
 						<WrapperCard key={index} title={item.content.header} text={item.content.text} name={item.name} />
