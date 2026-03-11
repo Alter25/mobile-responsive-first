@@ -2,11 +2,6 @@ import Marquee from "@/components/Marquee";
 import { Productos } from "@/lib/utils";
 import { WrapperCard } from "@/components/Cards";
 import { Mensajes } from "@/components/data/carrusel";
-import { Footer } from "@/components/Footer";
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
-import { FiPhone } from "react-icons/fi";
-
 
 
 export default function Home() {
@@ -31,25 +26,7 @@ export default function Home() {
 						<WrapperCard key={index} title={item.content.header} text={item.content.text} name={item.name} />
 					))
 				}
-				{/* sera que aqui ponga articulos sobre algo? no lo se aun */}
 			</div>
-			<Footer
-				Rss={<div className="flex flex-col justify-evenly h-full">
-					<FaWhatsapp size={48} />
-					<FaInstagram size={48} />
-					<FiPhone size={40} />
-				</div>}
-				ubicacion={
-					<div>
-						<h2 className="flex text-2xl">Gomez Palacio, Dgo.<span><IoLocationSharp size={24} /></span></h2>
-						<p></p>
-					</div>
-				}
-			>
-				<div>
-					<p className="text-3xl">Todos los derechos reservados. &copy;</p>
-				</div>
-			</Footer>
 		</section>
 	);
 };
