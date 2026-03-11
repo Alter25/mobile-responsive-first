@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import { Button } from "./ui/button";
+import { Link } from "react-router";
 
 export const Header = () => {
   return (
@@ -8,7 +9,7 @@ export const Header = () => {
         <div className="flex justify-between">
           {/* logo */}
           <div className="w-fit px-1 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">Emma</span>
+            <span className="text-white font-bold text-lg"><Link to={"/"}>Emma</Link></span>
           </div>
           <div className="m-auto">
             <Navbar />
