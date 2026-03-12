@@ -1,4 +1,4 @@
-import type { GroceryItemType } from "@/types/Types"
+import type { ProductsType } from "@/types/Types"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -7,37 +7,53 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
-export const Productos: GroceryItemType[] = [
+export const Productos: ProductsType[] = [
   {
     name: "ketchup",
-    imageUrl:"/groceryPictures/ketchup.png"
+    other:{
+      imgUrl:"/groceryPictures/ketchup.png"
+    }
   },
   {
     name: "mayonesa",
-    imageUrl:"/groceryPictures/mayonesa.png"
+    other:{
+      imgUrl:"/groceryPictures/mayonesa.png"
+    }
   },
   {
     name: "churrumais",
-    imageUrl:"/groceryPictures/churrumais.png"
+    other:{
+      imgUrl:"/groceryPictures/churrumais.png"
+    }
   },
   {
     name: "tostitos",
-    imageUrl:"/groceryPictures/tostitos.png"
+    other:{
+      imgUrl:"/groceryPictures/tostitos.png"
+    }
   },
   {
     name: "rancheritos",
-    imageUrl:"/groceryPictures/rancheritos.png"
+    other:{
+      imgUrl:"/groceryPictures/rancheritos.png"
+    }
   },
   {
     name: "leche lala entera",
-    imageUrl:"/groceryPictures/leche lala entera.png"
+    other:{
+      imgUrl:"/groceryPictures/leche lala entera.png"
+    }
   },
   {
     name: "nutrileche",
-    imageUrl:"/groceryPictures/nutrileche.png"
+    other:{
+      imgUrl:"/groceryPictures/nutrileche.png"
+    }
   },
   {
     name: "leche lala light",
-    imageUrl:"/groceryPictures/leche lala light.png"
+    other:{
+      imgUrl:"/groceryPictures/leche lala light.png"
+    }
   }
 ]

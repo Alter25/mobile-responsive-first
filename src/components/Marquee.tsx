@@ -1,10 +1,10 @@
-import type { GroceryItemType } from "@/types/Types";
+import type { ProductsType } from "@/types/Types";
 import Marquee from "react-fast-marquee";
 import Articulo from "./Cards";
 
 
 interface Props {
-  elementos: GroceryItemType[];
+  elementos: ProductsType[];
 }
 const MarqueeComponent = (Marquee as any).default || Marquee;
 
@@ -20,7 +20,7 @@ export default function MyMarquee({ elementos }: Props) {
     >
       {
         elementos.map((item, index) => {
-          return <Articulo key={index} name={item.name} imageUrl={item.imageUrl} />
+          return <Articulo key={index} name={item.name} imageUrl={item.other?.imgUrl} />
         })
       }
     </MarqueeComponent>

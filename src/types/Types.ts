@@ -1,11 +1,4 @@
-export interface GroceryItemType{
-  name: string;
-  imageUrl: string;
-  price?: number;
-  category?: CategoryType | CategoryType[];
-}
 
-type CategoryType = "Lacteos" | "Bebidas" | "Papitas" | "Limpieza";
 
 export interface CarruselCard{
   name: string;
@@ -15,13 +8,14 @@ export interface CarruselCard{
   }
 }
 
-export interface Productos{
+export interface ProductsType{
   name: string;
   marca?: string;
   precio?: number;
   peso?: number;
   cantidad?: number;
   other?: {
-    fechaRegistro: number;
+    fechaRegistro?: number;
+    imgUrl: string;
   }
 }
