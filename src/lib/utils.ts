@@ -1,4 +1,4 @@
-import type { ProductsType } from "@/types/Types"
+
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
