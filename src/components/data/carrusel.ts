@@ -20,14 +20,14 @@ export const Mensajes:CarruselCard[] = [
     name: "Nuestros Propósitos",
     content: {
       header: "Apoyar a la Comunidad",
-      text: "Contribuimos al bienestar de nuestra comunidad proporcionando productos esenciales accesibles."
+      text: "Contribuimos al bienestar de nuestra comunidad proporcionando productos esenciales y accesibles."
     }
   },
   {
     name: "Nuestras Metas",
     content: {
       header: "Diversidad de Productos",
-      text: "Ampliar nuestra oferta para cubrir todas las necesidades de nuestros clientes."
+      text: "Ampliar nuestra oferta para cubrir todas las necesidades de nuestros clientes y comunidad"
     }
   },
 ]

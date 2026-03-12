@@ -17,7 +17,11 @@ export interface CarruselCard{
 
 export interface Productos{
   name: string;
-  brand?: string;
-  price?: number;
+  marca?: string;
+  precio?: number;
   peso?: number;
+  cantidad?: number;
+  other?: {
+    fechaRegistro: number;
+  }
 }

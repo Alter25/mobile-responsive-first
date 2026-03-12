@@ -6,8 +6,8 @@ import {
   MenubarGroup,
   MenubarItem,
   MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
+  // MenubarSeparator,
+  // MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar"
 
