@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import NavbarButton from "./NavbarButton";
 import { Link } from "react-router";
 
 export const Header = () => {
@@ -7,11 +7,11 @@ export const Header = () => {
       <div className=" w-screen">
         <div className="flex justify-between">
           {/* logo */}
-          <div className="w-fit px-1 ml-2 h-10 bg-linear-to-br bg-secondary rounded-lg flex items-center justify-center">
-            <span className="text-primary font-bold text-lg"><Link to={"/"}>Emma</Link></span>
+          <div className="w-fit px-1 ml-2 h-10 bg-linear-to-br rounded-lg flex items-center justify-center bg-indigo-400">
+            <span className="text-primary font-bold text-lg">Emma</span>
           </div>
           <div className="ml-auto">
-            <Navbar />
+            <NavbarButton />
           </div>
           <div className="hidden sm:flex m-auto">
             <nav>
@@ -21,6 +21,9 @@ export const Header = () => {
                 <li><Link to={"/AboutUs"} />Nosotros</li>
                 <li><Link to={"/Contact"} />Contacto</li>
               </ol>
+              <div>
+
+              </div>
             </nav>
           </div>
           <div>

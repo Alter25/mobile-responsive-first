@@ -27,7 +27,7 @@ export const Footer = () => {
           <p className="text-sm mb-4">Recibe las mejores ofertas en tu correo.</p>
           <form className="flex gap-2">
             <input type="email" placeholder="Tu email" className="bg-slate-800 border-none rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 outline-none w-full" />
-            <button className="bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-md text-sm font-medium transition-all">
+            <button className="bg-indigo-400 hover:bg-indigo-500 text-white px-4 py-2 rounded-md text-sm font-medium transition-all">
               Unirse
             </button>
           </form>
