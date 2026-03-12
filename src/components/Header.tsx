@@ -10,12 +10,12 @@ export const Header = () => {
           <div className="w-fit px-1 ml-2 h-10 bg-linear-to-br bg-secondary rounded-lg flex items-center justify-center">
             <span className="text-primary font-bold text-lg"><Link to={"/"}>Emma</Link></span>
           </div>
-          <div className="mr-4">
+          <div className="ml-auto">
             <Navbar />
           </div>
           <div className="hidden sm:flex m-auto">
             <nav>
-              <ol className="flex gap-4">
+              <ol className="flex gap-8">
                 <li><Link to={"/"} />Inicio</li>
                 <li><Link to={"/Productos"} />Productos</li>
                 <li><Link to={"/AboutUs"} />Nosotros</li>
@@ -24,7 +24,6 @@ export const Header = () => {
             </nav>
           </div>
           <div>
-
           </div>
         </div>
       </div>

@@ -14,3 +14,10 @@ export interface CarruselCard{
     text: string,
   }
 }
+
+export interface Productos{
+  name: string;
+  brand?: string;
+  price?: number;
+  peso?: number;
+}

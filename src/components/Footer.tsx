@@ -1,6 +1,4 @@
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
-import { IoLocationSharp } from "react-icons/io5";
+
 
 
 export const Footer = () => {
@@ -38,7 +36,6 @@ export const Footer = () => {
 
       <div className="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
         <p>© 2026 Emma Store. Todos los derechos reservados.</p>
-
         <div className="flex gap-6">
           <a href="#" className="hover:text-blue-400 transition-colors">Facebook</a>
           <a href="#" className="hover:text-pink-400 transition-colors">Instagram</a>

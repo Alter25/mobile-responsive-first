@@ -9,8 +9,6 @@ export default function MainLayout() {
     <main className="grow">
       <Outlet />
     </main>
-    <footer>
-      <Footer />
-    </footer>
+    <Footer />
   </div>
 }
