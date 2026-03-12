@@ -1,5 +1,3 @@
-
-
 export interface CarruselCard{
   name: string;
   content: {
@@ -8,6 +6,8 @@ export interface CarruselCard{
   }
 }
 
+type Categoria = "algo";
+
 export interface ProductsType{
   id?: number;
   name: string;
@@ -15,6 +15,7 @@ export interface ProductsType{
   precio?: number;
   peso?: number;
   cantidad?: number;
+  categoria?: Categoria | Categoria[];
   other?: {
     fechaRegistro?: number;
     imgUrl: string;
