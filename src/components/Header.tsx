@@ -1,5 +1,6 @@
 import NavbarButton from "./NavbarButton";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 export const Header = () => {
   return (
@@ -14,16 +15,16 @@ export const Header = () => {
             <NavbarButton />
           </div>
           <div className="hidden sm:flex m-auto">
-            <nav>
-              <ol className="flex gap-8">
-                <li><Link to={"/"} />Inicio</li>
-                <li><Link to={"/Productos"} />Productos</li>
-                <li><Link to={"/AboutUs"} />Nosotros</li>
-                <li><Link to={"/Contact"} />Contacto</li>
+            <nav className="flex justify-between w-full">
+              <ol className="flex items-center justify-around gap-8 w-full">
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/Productos">Productos</Link></li>
+                <li><Link to="/AboutUs">Nosotros</Link></li>
+                <li><Link to="/Contact">Contacto</Link></li>
+                <li className="flex-1">
+                  <Button><Link to="/Login">Login</Link></Button>
+                </li>
               </ol>
-              <div>
-
-              </div>
             </nav>
           </div>
           <div>

@@ -1,5 +1,5 @@
 import Marquee from "@/components/Marquee";
-import { Productos } from "@/lib/utils";
+import { Productos } from "@/components/data/ProductosMarquee";
 import { WrapperCard } from "@/components/Cards";
 import { Mensajes } from "@/components/data/carrusel";
 
