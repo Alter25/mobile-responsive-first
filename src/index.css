@@ -15,6 +15,23 @@
 
   --font-family-sans: "Open Sans", sans-serif;
   --font-family-heading: "Montserrat", sans-serif;
+/* Fondo general de la página */
+  --color-page-bg: #f8fafc;
+  
+  /* El Hero: un verde esmeralda muy clarito que grita "frescura" */
+  --color-hero-bg: #ecfdf5; 
+  
+  /* El Header: azul marino muy oscuro para que resalte el menú */
+  --color-nav-bg: #0f172a;
+  
+  /* El Acento: Esmeralda vibrante para el logo y botones de compra */
+  --color-accent-emerald: #10b981;
+  
+  /* La Marquee: Un azul vibrante que hace resaltar los empaques rojos/amarillos */
+  --color-marquee-bg: #3b82f6;
+
+  /* Tarjetas: Blanco puro con borde sutil */
+  --color-card-bg: #ffffff;
 }
 
 @custom-variant dark (&:is(.dark *));

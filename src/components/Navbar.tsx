@@ -15,7 +15,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="flex">
+    <nav className="flex sm:hidden">
       <Menubar className="bg-violet-700 h-10 hidden sm:flex">
         <MenubarMenu>
           <MenubarTrigger>
