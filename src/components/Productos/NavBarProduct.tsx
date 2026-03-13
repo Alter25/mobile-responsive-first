@@ -25,12 +25,12 @@ export default function NavBarProduct() {
 				<MenubarTrigger>Editar</MenubarTrigger>
 				<MenubarContent>
 					<MenubarGroup>
-						<MenubarItem disabled={!logged}>
+						<MenubarItem className="hover:bg-violet-500" disabled={!logged}>
 							Nuevo Producto
 						</MenubarItem>
 					</MenubarGroup>
 					<MenubarGroup>
-						<MenubarItem disabled={!logged}>
+						<MenubarItem className="hover:bg-violet-500" disabled={!logged}>
 							Editar Existente
 						</MenubarItem>
 					</MenubarGroup>

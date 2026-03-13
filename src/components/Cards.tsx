@@ -7,6 +7,12 @@ interface Props {
 }
 
 
+export function ProductCard({ }) {
+  return <article>
+    
+  </article>
+}
+
 export const Articulo = ({ imageUrl, name }: Props) => {
   return <article className=" w-20 md:w-24 2xl:w-48 flex justify-center items-center mx-16 drop-shadow-xl">
     <img src={imageUrl} alt={name} />
