@@ -1,17 +1,9 @@
 import {
 	Menubar,
-	MenubarCheckboxItem,
 	MenubarContent,
 	MenubarGroup,
 	MenubarItem,
 	MenubarMenu,
-	MenubarRadioGroup,
-	MenubarRadioItem,
-	MenubarSeparator,
-	MenubarShortcut,
-	MenubarSub,
-	MenubarSubContent,
-	MenubarSubTrigger,
 	MenubarTrigger,
 } from "@/components/ui/menubar"
 import { useStore } from "@/lib/store/useStore"
