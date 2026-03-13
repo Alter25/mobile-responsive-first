@@ -7,7 +7,7 @@ import {
 	MenubarTrigger,
 } from "@/components/ui/menubar"
 import { useStore } from "@/lib/store/useStore"
-
+import { Input } from "@/components/ui/input"
 
 export default function NavBarProduct() {
 	const { logged } = useStore();
