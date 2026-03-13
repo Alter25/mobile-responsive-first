@@ -18,7 +18,7 @@ export default function NavBarProduct() {
 				<MenubarContent>
 					<MenubarGroup>
 						<MenubarItem className="hover:bg-violet-500" disabled={!logged}>
-							Nuevo Producto
+							Agregar Producto
 						</MenubarItem>
 					</MenubarGroup>
 					<MenubarGroup>
