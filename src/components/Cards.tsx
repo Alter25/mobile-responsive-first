@@ -1,3 +1,4 @@
+import type { ProductsType } from "@/types/Types"
 
 interface Props {
   imageUrl?: string;
@@ -6,10 +7,15 @@ interface Props {
   text?: string;
 }
 
-
-export function ProductCard({ }) {
+export function ProductCard({ item }: { item: ProductsType }) {
   return <article>
-    
+    <div>
+      <img src={item.other?.imgUrl} alt={item.name} />
+    </div>
+    <div>
+      <h4>{item.name} <span>${item.precio}</span></h4>
+      <p>{item.cantidad}</p>
+    </div>
   </article>
 }
 
