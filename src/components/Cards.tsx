@@ -6,15 +6,16 @@ interface Props {
   title?: string;
   text?: string;
 }
+// reach out
 
 export function ProductCard({ item }: { item: ProductsType }) {
-  return <article>
-    <div>
+  return <article className="max-w-52 p-2 border-3 rounded-3xl m-2 bg-blue-200 border-violet-500 flex flex-col justify-between">
+    <div className="w-22 m-auto">
       <img src={item.other?.imgUrl} alt={item.name} />
     </div>
-    <div>
-      <h4>{item.name} <span>${item.precio}</span></h4>
-      <p>{item.cantidad}</p>
+    <div className="w-full bg-indigo-500 rounded-2xl p-2 mt-1">
+      <h4>{item.name} <span className="text-green-400">$ <span>{item.precio}</span></span></h4>
+      <p>cantidad: <span>{item.cantidad}</span></p>
     </div>
   </article>
 }

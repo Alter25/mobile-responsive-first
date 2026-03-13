@@ -1,17 +1,17 @@
-import { useStore } from "@/lib/store/useStore"
+import { useProductsStore } from "@/lib/store/useProducsStore";
 import NavBarProduct from "@/components/Productos/NavBarProduct";
-import listaProductos from "@/components/Productos/ListaProductos";
+import ListaProductos from "@/components/Productos/ListaProductos";
 
 
 const Productos = () => {
-  const { logged } = useStore();
+  const { productos } = useProductsStore();
   return <section className="w-full p-4 h-screen">
     <section className="w-full relative border flex flex-col rounded-3xl bg-slate-500 h-full">
-      <div className="flex justify-end">
+      <div className="flex justify-end mb-16">
         <NavBarProduct />
       </div>
       <div>
-        <listaProductos />
+        <ListaProductos lista={productos} />
       </div>
     </section>
   </section>
