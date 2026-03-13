@@ -20,7 +20,10 @@ export default function NavBarProduct() {
 
 	const { logged } = useStore();
 	return <nav className="fixed w-full flex justify-end mt-4 mr-4">
-		<Input className="w-64 text-black" value={search} onChange={handleSearch} placeholder="buscar productos" />
+		<div className="flex items-center">
+			<label htmlFor="buscar">Buscar Producto: </label>
+			<Input id="buscar" className="w-64 text-black mx-4" value={search} onChange={handleSearch} placeholder="buscar productos" />
+		</div>
 		<Menubar>
 			<MenubarMenu>
 				<MenubarTrigger>Editar</MenubarTrigger>

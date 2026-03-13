@@ -9,7 +9,7 @@ interface Props {
 // reach out
 
 export function ProductCard({ item }: { item: ProductsType }) {
-  return <article className="max-w-52 p-2 border-3 rounded-3xl m-2 bg-blue-200 border-violet-500 flex flex-col justify-between">
+  return <article className="max-w-52 min-w-44 p-2 border-3 rounded-3xl m-2 bg-blue-200 border-violet-500 flex flex-col justify-between">
     <div className="w-22 m-auto">
       <img src={item.other?.imgUrl} alt={item.name} />
     </div>
