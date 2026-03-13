@@ -19,7 +19,7 @@ import { useStore } from "@/lib/store/useStore"
 
 export default function NavBarProduct() {
 	const { logged } = useStore();
-	return <nav className="fixed mt-4 ml-4">
+	return <nav className="fixed w-full flex justify-end mt-4 mr-4">
 		<Menubar>
 			<MenubarMenu>
 				<MenubarTrigger>Editar</MenubarTrigger>
