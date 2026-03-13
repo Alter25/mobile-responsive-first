@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
 import Home from "./pages/Home";
-import { About } from "./pages/About";
+import { AboutUs } from "./pages/AboutUs";
 import Products from "./pages/Products";
 
 
@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>          {/* layout wraps all child routes */}
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route path="about" element={<AboutUs />} />
           <Route path="productos" element={<Products />} />
         </Route>
       </Routes>
