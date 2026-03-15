@@ -5,7 +5,7 @@ import ListaProductos from "@/components/Productos/ListaProductos";
 
 const Productos = () => {
   const { productos } = useProductsStore();
-  return <section className="w-full p-4 h-screen">
+  return <section className="w-full p-4 overflow-y-scroll">
     <section className="w-full relative border flex flex-col rounded-3xl bg-slate-500 h-full">
       <div className="flex justify-end mb-16">
         <NavBarProduct />

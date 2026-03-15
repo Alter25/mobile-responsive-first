@@ -1,3 +1,4 @@
+import { FiEdit } from "react-icons/fi";
 import {
 	Menubar,
 	MenubarContent,
@@ -19,14 +20,14 @@ export default function NavBarProduct() {
 	}
 
 	const { logged } = useStore();
-	return <nav className="fixed w-full flex justify-end mt-4 mr-4">
-		<div className="flex items-center">
+	return <nav className=" w-full flex justify-end p-4 mt-4 mr-4">
+		<div className="flex w-full justify-start ml-4 items-center">
 			<label htmlFor="buscar">Buscar Producto: </label>
 			<Input id="buscar" className="w-64 text-black mx-4" value={search} onChange={handleSearch} placeholder="buscar productos" />
 		</div>
 		<Menubar>
 			<MenubarMenu>
-				<MenubarTrigger>Editar</MenubarTrigger>
+				<MenubarTrigger><FiEdit /></MenubarTrigger>
 				<MenubarContent>
 					<MenubarGroup>
 						<MenubarItem className="hover:bg-violet-500" disabled={!logged}>

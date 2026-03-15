@@ -19,7 +19,6 @@ export default function NavbarButton() {
           <MenubarTrigger>
             <Menu />
           </MenubarTrigger>
-          {/* force a smaller dropdown by overriding the builtin min-w and setting a width */}
           <MenubarContent className="bg-hero-bg min-w-24 mr-2 border border-red-900">
             <MenubarGroup className="flex flex-col items-start justify-center">
               <MenubarItem><Link to="/" >Inicio</Link></MenubarItem>
