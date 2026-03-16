@@ -12,7 +12,7 @@ export default function ListaProductos({ lista }: { lista?: ProductsType[] }) {
         return <ProductCard item={producto} />
       })
     }
-  </section> : <section>
+  </section> : <section className="flex flex-col items-center justify-center sm:gap-8 sm:flex-row sm:flex-wrap">
     {
       lista?.map(p => {
         return p.name.includes(search) && <ProductCard item={p} />
