@@ -9,11 +9,12 @@ import {
 } from "@/components/ui/menubar"
 import { useStore } from "@/lib/store/useStore"
 import { Input } from "../ui/input";
+import { useModalStore } from "@/lib/store/useModalStore";
 
 export default function NavBarProduct() {
 	const search = useStore(state => state.search);
 	const setSearch = useStore(state => state.setSearch);
-	const shiftProductWindow = useStore(state => state.shiftShowNewProduct);
+	const open = useModalStore(state => state.open);
 
 	const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
@@ -31,7 +32,7 @@ export default function NavBarProduct() {
 				<MenubarTrigger><FiEdit /></MenubarTrigger>
 				<MenubarContent>
 					<MenubarGroup>
-						<MenubarItem onClick={shiftProductWindow} className="hover:bg-violet-500" disabled={!logged}>
+						<MenubarItem onClick={() => open(null)} className="hover:bg-violet-500" disabled={!logged}>
 							Agregar Producto
 						</MenubarItem>
 					</MenubarGroup>
