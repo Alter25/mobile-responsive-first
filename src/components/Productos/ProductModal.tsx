@@ -13,9 +13,8 @@ export default function ProductModal({ className }: Props) {
   if (!isOpen) return null;
 
   return <Portal>
-    <section className={cn("w-120 h-200 absolute border-accent-emerald bg-fuchsia-300", className)}>
+    <div onClick={close} className={cn(" fixed inset-0 z-50 border-accent-emerald bg-black/50", className)} />
 
-    </ section >
   </Portal>
 
 }
