@@ -19,9 +19,6 @@ export default function NavBarProduct() {
 		const value = e.target.value;
 		setSearch(value);
 	}
-	const handleShowNewProduct = () => {
-		shiftProductWindow();
-	}
 
 	const { logged } = useStore();
 	return <nav className=" w-full flex justify-end p-4 mt-4 mr-4">
@@ -34,7 +31,7 @@ export default function NavBarProduct() {
 				<MenubarTrigger><FiEdit /></MenubarTrigger>
 				<MenubarContent>
 					<MenubarGroup>
-						<MenubarItem onClick={handleShowNewProduct} className="hover:bg-violet-500" disabled={!logged}>
+						<MenubarItem onClick={shiftProductWindow} className="hover:bg-violet-500" disabled={!logged}>
 							Agregar Producto
 						</MenubarItem>
 					</MenubarGroup>
