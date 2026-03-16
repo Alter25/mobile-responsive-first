@@ -2,7 +2,7 @@ import { useProductsStore } from "@/lib/store/useProducsStore";
 import NavBarProduct from "@/components/Productos/NavBarProduct";
 import ListaProductos from "@/components/Productos/ListaProductos";
 import { useModalStore } from "@/lib/store/useModalStore";
-import NewProduct from "@/components/Productos/NewProduct";
+import ProductModal from "@/components/Productos/ProductModal";
 
 const Productos = () => {
   const { productos } = useProductsStore();
@@ -16,7 +16,7 @@ const Productos = () => {
       </div>
       <div className="relative">
         {
-          isOpen && <NewProduct />
+          isOpen && <ProductModal />
         }
         <ListaProductos lista={productos} />
       </div>
