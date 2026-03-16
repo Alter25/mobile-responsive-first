@@ -13,10 +13,14 @@ import { Input } from "../ui/input";
 export default function NavBarProduct() {
 	const search = useStore(state => state.search);
 	const setSearch = useStore(state => state.setSearch);
+	const shiftProductWindow = useStore(state => state.shiftShowNewProduct);
 
 	const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
 		setSearch(value);
+	}
+	const handleShowNewProduct = () => {
+		shiftProductWindow();
 	}
 
 	const { logged } = useStore();
@@ -30,7 +34,7 @@ export default function NavBarProduct() {
 				<MenubarTrigger><FiEdit /></MenubarTrigger>
 				<MenubarContent>
 					<MenubarGroup>
-						<MenubarItem className="hover:bg-violet-500" disabled={!logged}>
+						<MenubarItem onClick={handleShowNewProduct} className="hover:bg-violet-500" disabled={!logged}>
 							Agregar Producto
 						</MenubarItem>
 					</MenubarGroup>
