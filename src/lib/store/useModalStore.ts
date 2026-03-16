@@ -1,21 +1,22 @@
 import { create } from "zustand";
+import type { ProductsType } from "@/types/Types";
 
 interface ModalStore {
   isOpen: boolean;
-  data: unknown;
-  Open: (data?: unknown) => void;
-  Close: () => void;
+  data: ProductsType | null;
+  open: (data: ProductsType | null) => void;
+  close: () => void;
 }
 
 export const useModalStore = create<ModalStore>((set) => ({
   isOpen: false,
-  data: undefined,
-  Open: (data = null) =>
+  data: null,
+  open: (data) =>
     set({
       isOpen: true,
       data,
     }),
-  Close: () =>
+  close: () =>
     set({
       isOpen: false,
       data: null,
