@@ -28,7 +28,7 @@ export default function ProductModal({ className, item = null }: Props) {
           <Button className="">x</Button>
         </div>
         <div className="border">
-          
+
         </div>
       </div>
     </div>
