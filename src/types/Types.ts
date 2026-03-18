@@ -1,14 +1,14 @@
-export interface CarruselCard{
+export interface CarruselCard {
   name: string;
   content: {
-    header: string,
-    text: string,
-  }
+    header: string;
+    text: string;
+  };
 }
 
 type Categoria = "algo";
 
-export interface ProductsType{
+export interface ProductsType {
   id?: number;
   name: string;
   marca?: string;
@@ -19,5 +19,15 @@ export interface ProductsType{
   other?: {
     fechaRegistro?: number;
     imgUrl: string;
-  }
+  };
+}
+
+export interface SelectOption {
+  value: string;
+  label: string;
+}
+
+export interface SelectGroup {
+  label: string;
+  options: SelectOption[];
 }
