@@ -19,13 +19,13 @@ export default function NavbarButton() {
           <MenubarTrigger>
             <Menu />
           </MenubarTrigger>
-          <MenubarContent className="bg-hero-bg min-w-24 mr-2 border border-red-900">
+          <MenubarContent className="bg-hero-bg min-w-24 mr-2 border border-indigo-400">
             <MenubarGroup className="flex flex-col items-start justify-center">
-              <MenubarItem><Link to="/" >Inicio</Link></MenubarItem>
-              <MenubarItem><Link to="/Productos" >Productos</Link></MenubarItem>
-              <MenubarItem><Link to="/AboutUs" >Nosotros</Link></MenubarItem>
-              <MenubarItem><Link to="/Contact" >Contacto</Link></MenubarItem>
-              <MenubarItem><Link to="/Login" >Login</Link></MenubarItem>
+              <MenubarItem className="hover:bg-indigo-700/40 w-full"><Link to="/" >Inicio</Link></MenubarItem>
+              <MenubarItem className="hover:bg-indigo-700/40 w-full"><Link to="/Productos" >Productos</Link></MenubarItem>
+              <MenubarItem className="hover:bg-indigo-700/40 w-full"><Link to="/AboutUs" >Nosotros</Link></MenubarItem>
+              <MenubarItem className="hover:bg-indigo-700/40 w-full"><Link to="/Contact" >Contacto</Link></MenubarItem>
+              <MenubarItem className="hover:bg-indigo-700/40 w-full"><Link to="/Login" >Login</Link></MenubarItem>
             </MenubarGroup>
           </MenubarContent>
         </MenubarMenu>
