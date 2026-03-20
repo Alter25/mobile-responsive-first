@@ -50,7 +50,8 @@ export const WrapperCard = ({ title, text, name }: Props) => {
   </article>
 }
 
+export default function Card({ item }: { item: ProductsType }) {
+  return true ? <section>
 
-export default function Card({ imageUrl, name }: Props) {
-  return <Articulo imageUrl={imageUrl} name={name} />
+  </section> : <></>
 }

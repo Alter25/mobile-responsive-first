@@ -5,6 +5,8 @@ import type { ProductsType } from "@/types/Types"
 
 interface StoreType {
   productos: ProductsType[];
+  editable: boolean;
+  shiftEditable: () => void;
   increaseProduct: (id:number, n:number) => void;
   decreaseProduct: (id:number, n:number) => void;
   addProduct: (p: ProductsType) => void;
@@ -14,6 +16,10 @@ interface StoreType {
 
 export const useProductsStore = create<StoreType>((set) => ({
   productos: Productos,
+  editable: false,
+  shiftEditable: () => set((state) => ({
+    editable:!state.editable
+  })),
   increaseProduct: (id: number, n: number) => set((state) => ({
     productos: state.productos.map(item =>
       item.id !== id ? item : { ...item, cantidad: (item.cantidad || 0) + n})

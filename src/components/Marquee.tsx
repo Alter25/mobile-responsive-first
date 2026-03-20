@@ -1,6 +1,6 @@
 import type { ProductsType } from "@/types/Types";
 import Marquee from "react-fast-marquee";
-import Articulo from "./Cards";
+import {Articulo} from "./Cards";
 
 
 interface Props {
@@ -16,7 +16,7 @@ export default function MyMarquee({ elementos }: Props) {
       gradientWidth={40}
       speed={50}
       pauseOnHover={true}
-      className="flex justify-between"
+
     >
       {
         elementos.map((item, index) => {
