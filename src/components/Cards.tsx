@@ -1,4 +1,5 @@
 import type { ProductsType } from "@/types/Types"
+import { EmptyFrame } from "./EmptyFrame";
 
 interface Props {
   imageUrl?: string;
@@ -20,7 +21,7 @@ export const EditableCard = ({ item }: { item: ProductsType }) => {
 }
 
 
-export function ProductCard({ item }: { item: ProductsType }) {
+export default function ProductCard({ item }: { item: ProductsType }) {
   return <article className="max-w-52 min-w-44 p-2 border-3 rounded-3xl m-2 bg-blue-200 border-violet-500 flex flex-col justify-between">
     <div className="w-22 m-auto">
       <img className="max-h-50 m-auto" src={item.other?.imgUrl} alt={item.name} />
@@ -34,10 +35,13 @@ export function ProductCard({ item }: { item: ProductsType }) {
 
 export const Articulo = ({ imageUrl, name }: Props) => {
   return <article className=" w-20 md:w-24 2xl:w-48 flex justify-center items-center mx-16 drop-shadow-xl">
-    <img src={imageUrl} alt={name} />
+    {
+      imageUrl ? <img src={imageUrl} alt={name} /> : <EmptyFrame />
+    }
   </article>
 }
 
+// Esto es para el marquee!
 export const WrapperCard = ({ title, text, name }: Props) => {
   return <article className="max-w-2xs min-w-80 min-h-80 bg-card-bg flex flex-col justify-center items-center m-4 py-4 border border-slate-200 rounded-lg drop-shadow-xl">
     <div className="px-5 py-2 mb-2">
@@ -50,6 +54,6 @@ export const WrapperCard = ({ title, text, name }: Props) => {
   </article>
 }
 
-export default function Card({ item }: { item: ProductsType }) {
-
+export function Card({ item }: { item: ProductsType }) {
+  return <div></div>
 }

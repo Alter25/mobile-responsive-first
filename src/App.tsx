@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>          {/* layout wraps all child routes */}
           <Route index element={<Home />} />
-          <Route path="about" element={<AboutUs />} />
+          <Route path="AboutUs" element={<AboutUs />} />
           <Route path="productos" element={<Products />} />
         </Route>
       </Routes>

@@ -1,7 +1,6 @@
 
 
 export const EmptyFrame = () => {
-  return <div className="w-20 h-20 border rounded-2xl bg-lime-100"></div>
+  return <div className="w-24 h-30 border rounded-2xl bg-purple-400"></div>
 }
 
-export default { EmptyFrame }

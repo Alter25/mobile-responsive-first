@@ -59,10 +59,14 @@ export default function ProductModal({ className, item = null }: Props) {
                 <Input id="precio" value={precio} onChange={handlePrecio} type="number" />
               </div>
             </div>
+            <div className="my-auto">
+              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm"></textarea>
+            </div>
+            <div className="my-auto flex w-full justify-between">
+              <Button className="flex-1 mx-4">Ok</Button>
+              <Button className="flex-1 mx-4">Cancel</Button>
+            </div>
           </div>
-          <p>nombre: {name}</p>
-          <p>cantidad: {cantidad}</p>
-          <p>precio: {precio}</p>
         </div>
       </div>
     </div>

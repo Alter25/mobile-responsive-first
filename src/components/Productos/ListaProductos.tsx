@@ -1,5 +1,5 @@
 import type { ProductsType } from "@/types/Types"
-import { ProductCard } from "../Cards"
+import ProductCard from "../Cards"
 import { useStore } from "@/lib/store/useStore"
 
 
