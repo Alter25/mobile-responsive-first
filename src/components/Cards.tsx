@@ -23,7 +23,7 @@ export const EditableCard = ({ item }: { item: ProductsType }) => {
 export function ProductCard({ item }: { item: ProductsType }) {
   return <article className="max-w-52 min-w-44 p-2 border-3 rounded-3xl m-2 bg-blue-200 border-violet-500 flex flex-col justify-between">
     <div className="w-22 m-auto">
-      <img src={item.other?.imgUrl} alt={item.name} />
+      <img className="max-h-50 m-auto" src={item.other?.imgUrl} alt={item.name} />
     </div>
     <div className="w-full bg-indigo-500 rounded-2xl p-2 mt-1">
       <h4>{item.name} <span className="text-green-400">$ <span>{item.precio}</span></span></h4>
@@ -51,7 +51,5 @@ export const WrapperCard = ({ title, text, name }: Props) => {
 }
 
 export default function Card({ item }: { item: ProductsType }) {
-  return true ? <section>
 
-  </section> : <></>
 }

@@ -56,5 +56,20 @@ export const Productos: ProductsType[] = [
     other:{
       imgUrl:"/groceryPictures/leche lala light.png"
     }
+  },
+  {
+    name: "cheetos",
+    cantidad: 0,
+    other: {
+      imgUrl:"/groceryPictures/cheetos.png"
+    }
+  }
+  ,
+  {
+    name: "coca de 500ml",
+    cantidad: 0,
+    other: {
+      imgUrl:"/groceryPictures/coca de medio.png"
+    }
   }
 ]
