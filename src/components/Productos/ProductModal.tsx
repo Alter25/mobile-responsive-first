@@ -5,6 +5,7 @@ import { useModalStore } from "@/lib/store/useModalStore";
 import type { ProductsType } from "@/types/Types";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { useProductsStore } from "@/lib/store/useProducsStore";
 
 interface Props {
   className?: string;
@@ -15,8 +16,10 @@ export default function ProductModal({ className, item = null }: Props) {
   const isOpen = useModalStore(s => s.isOpen);
   const close = useModalStore(s => s.close);
   const [name, setName] = useState<string>("");
-  const [cantidad, setCantidad] = useState<number>();
+  const [cantidad, setCantidad] = useState<number>(0);
   const [precio, setPrecio] = useState<number>();
+  const [descripcion, setDescripcion] = useState<string>("");
+  const addProduct = useProductsStore(s => s.addProduct);
 
   if (!isOpen) return null;
 
@@ -33,6 +36,17 @@ export default function ProductModal({ className, item = null }: Props) {
   const handlePrecio = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setPrecio(Number(value));
+  }
+  const handleDescription = () => {
+    setDescripcion();
+  }
+  const handleSaveProduct = () => {
+    const p: ProductsType = {
+      name,
+      cantidad,
+      precio,
+    }
+    addProduct();
   }
 
   return <Portal>
@@ -60,10 +74,10 @@ export default function ProductModal({ className, item = null }: Props) {
               </div>
             </div>
             <div className="my-auto">
-              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm"></textarea>
+              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm" onChange={ }></textarea>
             </div>
             <div className="my-auto flex w-full justify-between">
-              <Button className="flex-1 mx-4">Ok</Button>
+              <Button className="flex-1 mx-4">Guardar</Button>
               <Button className="flex-1 mx-4">Cancel</Button>
             </div>
           </div>

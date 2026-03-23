@@ -14,6 +14,7 @@ export interface ProductsType {
   marca?: string;
   precio?: number;
   peso?: number;
+  descripcion?: string;
   cantidad: number;
   categoria?: Categoria | Categoria[];
   other?: {
