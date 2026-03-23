@@ -75,7 +75,7 @@ export default function ProductModal({ className, item = null }: Props) {
               </div>
             </div>
             <div className="my-auto w-full">
-              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm w-full min-h-20" onChange={handleDescription} />
+              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm w-full min-h-20 p-1" onChange={handleDescription} />
             </div>
             <div className="my-auto flex w-full justify-between">
               <Button className="flex-1 mx-4" onClick={handleSaveProduct}>Guardar</Button>
