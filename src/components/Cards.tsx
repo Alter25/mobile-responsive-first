@@ -24,7 +24,9 @@ export const EditableCard = ({ item }: { item: ProductsType }) => {
 export default function ProductCard({ item }: { item: ProductsType }) {
   return <article className="max-w-52 min-w-44 p-2 border-3 rounded-3xl m-2 bg-blue-200 border-violet-500 flex flex-col justify-between">
     <div className="w-22 m-auto">
-      <img className="max-h-50 m-auto" src={item.other?.imgUrl} alt={item.name} />
+      {
+        item.other?.imgUrl ? <img className="max-h-50 m-auto" src={item.other?.imgUrl} alt={item.name} /> : <EmptyFrame texto={item.name} />
+      }
     </div>
     <div className="w-full bg-indigo-500 rounded-2xl p-2 mt-1">
       <h4>{item.name} <span className="text-green-400">$ <span>{item.precio}</span></span></h4>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils"
 import Portal from "../Portal";
 import { useModalStore } from "@/lib/store/useModalStore";
@@ -37,16 +37,17 @@ export default function ProductModal({ className, item = null }: Props) {
     const value = e.target.value;
     setPrecio(Number(value));
   }
-  const handleDescription = () => {
-    setDescripcion();
+  const handleDescription = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setDescripcion(e.target.value);
   }
   const handleSaveProduct = () => {
     const p: ProductsType = {
       name,
       cantidad,
       precio,
+      descripcion
     }
-    addProduct();
+    addProduct(p);
   }
 
   return <Portal>
@@ -55,7 +56,7 @@ export default function ProductModal({ className, item = null }: Props) {
       <div className=" bg-white w-[70%] h-[80%] rounded-lg p-6 pointer-events-auto">
         <div className="w-full flex justify-center border-b p-2">
           <h1 className="w-[90%] text-3xl">{title}</h1>
-          <Button className="">x</Button>
+          <Button onClick={close}>x</Button>
         </div>
         <div className="border rounded-xl mt-2 w-full h-[90%] flex flex-col justify-center items-center">
           <div className="mx-auto px-6 border w-110 h-150 flex flex-col items-center justify-start">
@@ -73,12 +74,12 @@ export default function ProductModal({ className, item = null }: Props) {
                 <Input id="precio" value={precio} onChange={handlePrecio} type="number" />
               </div>
             </div>
-            <div className="my-auto">
-              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm" onChange={ }></textarea>
+            <div className="my-auto w-full">
+              <textarea name="description" id="description" placeholder="descripcion" className="border-2 rounded-sm w-full min-h-20" onChange={handleDescription} />
             </div>
             <div className="my-auto flex w-full justify-between">
-              <Button className="flex-1 mx-4">Guardar</Button>
-              <Button className="flex-1 mx-4">Cancel</Button>
+              <Button className="flex-1 mx-4" onClick={handleSaveProduct}>Guardar</Button>
+              <Button className="flex-1 mx-4" onClick={close}>Cancel</Button>
             </div>
           </div>
         </div>
