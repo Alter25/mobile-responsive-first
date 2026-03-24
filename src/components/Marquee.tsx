@@ -1,6 +1,6 @@
 import type { ProductsType } from "@/types/Types";
 import Marquee from "react-fast-marquee";
-import {Articulo} from "./Cards";
+import { Articulo } from "./Cards";
 
 
 interface Props {
