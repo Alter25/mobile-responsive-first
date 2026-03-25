@@ -7,3 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 
+export function verifyPassword(pass:string):boolean {
+  if (pass.length < 8) return false;
+  if (!pass.match(/\w+\d{3}/)) return false;
+  return true;
+}

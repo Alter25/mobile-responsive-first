@@ -25,10 +25,10 @@ export default function Login() {
             Password
           </FieldLabel>
           <Input id="password" type="password" />
-          <FieldDescription>8 Cararacteres como minimo!</FieldDescription>
+          <FieldDescription className="text-purple-700">8 Cararacteres como minimo!</FieldDescription>
           <div className="flex gap-2 items-center mt-8">
             <Checkbox id="keepsigned" />
-            <FieldLabel className="text-black">Mantener iniciada la sesion</FieldLabel>
+            <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
           </div>
           <Button className="mt-4">Ingresar</Button>
         </Field>
