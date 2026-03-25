@@ -37,16 +37,20 @@ export default function Login() {
           <Input id="username" type="text" />
         </Field>
         <Field className="px-12">
-          <FieldLabel htmlFor="password">
-            Password
-          </FieldLabel>
-          <Input id="password" type="text" value={password} onChange={handlePassword} />
-          <FieldDescription className="text-purple-700">8 Cararacteres y 2 digitos como minimo!</FieldDescription>
-          <div className="flex gap-2 items-center mt-8">
-            <Checkbox id="keepsigned" />
-            <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
+          <div className="min-h-60 flex flex-col">
+            <div className="flex-1">
+              <FieldLabel htmlFor="password">Password</FieldLabel>
+              <Input id="password" type="text" value={password} onChange={handlePassword} />
+              {handleDisableButton() && <FieldDescription className="text-purple-700">8 Cararacteres y <br />2 digitos como minimo!</FieldDescription>}
+            </div>
+            <div className="flex flex-col">
+              <div className="flex gap-2 items-center mt-8">
+                <Checkbox id="keepsigned" />
+                <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
+              </div>
+              <Button className="mt-4" disabled={handleDisableButton()}>Ingresar</Button>
+            </div>
           </div>
-          <Button className="mt-4" disabled={handleDisableButton()}>Ingresar</Button>
         </Field>
       </FieldGroup>
     </FieldSet>
