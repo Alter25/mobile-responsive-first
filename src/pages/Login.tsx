@@ -19,6 +19,13 @@ export default function Login() {
     const p = s.target.value;
     setPassword(p);
   }
+  const handleDisableButton = () => {
+    if (password !== "" && verifyPassword(password)) {
+      return false;
+    }
+    return true;
+  }
+
 
   return <section className="w-full p-4 flex justify-center items-center mt-4 sm:mt-12">
     <FieldSet className="bg-indigo-400 rounded-md w-80 h-100">
@@ -34,13 +41,12 @@ export default function Login() {
             Password
           </FieldLabel>
           <Input id="password" type="text" value={password} onChange={handlePassword} />
-          <FieldDescription className="text-purple-700">8 Cararacteres como minimo!</FieldDescription>
-          {verifyPassword(password) && <p>ok</p>}
+          <FieldDescription className="text-purple-700">8 Cararacteres y 2 digitos como minimo!</FieldDescription>
           <div className="flex gap-2 items-center mt-8">
             <Checkbox id="keepsigned" />
             <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
           </div>
-          <Button className="mt-4">Ingresar</Button>
+          <Button className="mt-4" disabled={handleDisableButton()}>Ingresar</Button>
         </Field>
       </FieldGroup>
     </FieldSet>
