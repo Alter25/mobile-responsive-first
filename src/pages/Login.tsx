@@ -9,18 +9,22 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
-import { verifyPassword } from "@/lib/utils";
+import { verifyEmail, verifyPassword } from "@/lib/utils";
 
 
 export default function Login() {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState<string>("");
 
   const handlePassword = (s: React.ChangeEvent<HTMLInputElement>) => {
     const p = s.target.value;
     setPassword(p);
   }
+  const handleEmail = (s: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(s.target.value);
+  }
   const handleDisableButton = () => {
-    if (password !== "" && verifyPassword(password)) {
+    if (password !== "" && verifyPassword(password) && email !== "" && verifyEmail(email)) {
       return false;
     }
     return true;
@@ -31,15 +35,15 @@ export default function Login() {
     <FieldSet className="bg-indigo-400 rounded-md w-80 h-100">
       <FieldGroup className="my-8">
         <Field className="px-12">
-          <FieldLabel htmlFor="username">
-            Username
+          <FieldLabel htmlFor="email">
+            Email:
           </FieldLabel>
-          <Input id="username" type="text" />
+          <Input id="email" value={email} onChange={handleEmail} type="text" />
         </Field>
         <Field className="px-12">
           <div className="min-h-60 flex flex-col">
             <div className="flex-1">
-              <FieldLabel htmlFor="password">Password</FieldLabel>
+              <FieldLabel htmlFor="password">Password:</FieldLabel>
               <Input id="password" type="text" value={password} onChange={handlePassword} />
               {handleDisableButton() && <FieldDescription className="text-purple-700">8 Cararacteres y <br />2 digitos como minimo!</FieldDescription>}
             </div>

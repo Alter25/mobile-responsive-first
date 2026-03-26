@@ -12,3 +12,7 @@ export function verifyPassword(pass:string):boolean {
   if (!pass.match(/\w+\d{2}/)) return false;
   return true;
 }
+export function verifyEmail(email: string): boolean {
+  if (!email.match(/^[\S@/]+@[\S@]+\.[\S]+$/)) return false;
+  return true;
+}
