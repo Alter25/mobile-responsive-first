@@ -3,7 +3,7 @@ import MainLayout from "./layout/MainLayout";
 import Home from "./pages/Home";
 import { AboutUs } from "./pages/AboutUs";
 import Products from "./pages/Products";
-import Login from "./pages/Login";
+import AuthPage from "./pages/AuthPage";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="AboutUs" element={<AboutUs />} />
           <Route path="productos" element={<Products />} />
-          <Route path="Login" element={<Login />} />
+          <Route path="Login" element={<AuthPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
