@@ -10,11 +10,15 @@ import {
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
 import { verifyEmail, verifyPassword } from "@/lib/utils";
+import { register, login } from "@/services/authServices";
+import { useStore } from "@/lib/store/useStore";
 
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState<string>("");
+  const logged = useStore(s => s.logged);
+  const shiftLogged = useStore(s => s.shiftLogged);
 
   const handlePassword = (s: React.ChangeEvent<HTMLInputElement>) => {
     const p = s.target.value;
@@ -28,6 +32,14 @@ export default function Login() {
       return false;
     }
     return true;
+  }
+  const handleLogin = async () => {
+    try {
+      await login(email, password);
+      shiftLogged();
+    } catch (error) {
+      console.error(error);
+    }
   }
 
 
@@ -52,7 +64,7 @@ export default function Login() {
                 <Checkbox id="keepsigned" />
                 <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
               </div>
-              <Button className="mt-4" disabled={handleDisableButton()}>Ingresar</Button>
+              <Button className="mt-4" disabled={handleDisableButton()} onClick={handleLogin}>Ingresar</Button>
             </div>
           </div>
         </Field>
