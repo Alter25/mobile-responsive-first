@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 interface StoreType {
-  logged: boolean;
+  isLogged: boolean;
   dark: boolean;
   showNewProd: boolean;
   search: string;
@@ -12,13 +12,13 @@ interface StoreType {
 }
 
 export const useStore = create<StoreType>((set) => ({
-  logged: true,
+  isLogged: true,
   dark: false,
   search: "",
   showNewProd: true,
   shiftLogged: () =>
     set((state) => ({
-      logged: !state.logged,
+      isLogged: !state.isLogged,
     })),
   shiftDark: () =>
     set((state) => ({
