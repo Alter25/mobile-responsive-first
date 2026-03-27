@@ -1,13 +1,10 @@
 import { useProductsStore } from "@/lib/store/useProducsStore";
 import NavBarProduct from "@/components/Productos/NavBarProduct";
 import ListaProductos from "@/components/Productos/ListaProductos";
-import { useModalStore } from "@/lib/store/useModalStore";
 import ProductModal from "@/components/Productos/ProductModal";
 
 const Productos = () => {
   const { productos } = useProductsStore();
-  const isOpen = useModalStore(state => state.isOpen);
-
 
   return <section className="w-full p-4 overflow-y-scroll">
     <section className="w-full relative border flex flex-col rounded-3xl bg-slate-500 h-full">
@@ -15,9 +12,7 @@ const Productos = () => {
         <NavBarProduct />
       </div>
       <div className="relative">
-        {
-          isOpen && <ProductModal />
-        }
+        <ProductModal />
         <ListaProductos lista={productos} />
       </div>
     </section>

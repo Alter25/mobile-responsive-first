@@ -16,15 +16,14 @@ import type { UserCreate } from "@/types/Types";
 
 
 export default function AuthForm() {
-  const [logged, setLogged] = useState(true);
+  const [isRegisterMode, setIsRegisterMode] = useState(true);
   const [email, setEmail] = useState<string>("");
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const isLogged = useStore(s => s.isLogged);
   const shiftLogged = useStore(s => s.shiftLogged);
 
   const switchLogged = () => {
-    setLogged(p => !p);
+    setIsRegisterMode(p => !p);
   }
   const handleUserName = (s: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(s.target.value);
@@ -45,7 +44,7 @@ export default function AuthForm() {
     return true;
   }
   const handlePostAction = async () => {
-    if (logged) {
+    if (isRegisterMode) {
       try {
         await login(email, password);
         shiftLogged();
@@ -70,7 +69,7 @@ export default function AuthForm() {
   return (<div>
     <FieldSet className="bg-indigo-400 shadow-2xl rounded-md w-80 h-fit pb-4">
       <FieldGroup className="mt-8">
-        {logged === true ? <Field className="px-12">
+        {isRegisterMode === true ? <Field className="px-12">
           <FieldLabel htmlFor="email">
             Email:
           </FieldLabel>
@@ -103,11 +102,11 @@ export default function AuthForm() {
                 <Checkbox id="keepsigned" />
                 <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
               </div>
-              <Button className="mt-4" disabled={handleDisableButton()} onClick={handlePostAction}>{logged === false ? "Registrar" : "Ingresar"}</Button>
+              <Button className="mt-4" disabled={handleDisableButton()} onClick={handlePostAction}>{isRegisterMode === false ? "Registrar" : "Ingresar"}</Button>
             </div>
             <div>
               {
-                logged === true ?
+                isRegisterMode === true ?
                   <div className="mt-2 py-4">
                     <span className="mb-2 mr-4">No tienes cuenta?</span>
                     <button className="hover:scale-[110%] hover:cursor-pointer border-b border-indigo-700 shadow-4xl shadow-blue-900" onClick={switchLogged}>Registrate!</button>

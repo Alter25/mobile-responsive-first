@@ -12,7 +12,7 @@ interface StoreType {
 }
 
 export const useStore = create<StoreType>((set) => ({
-  isLogged: true,
+  isLogged: false,
   dark: false,
   search: "",
   showNewProd: true,

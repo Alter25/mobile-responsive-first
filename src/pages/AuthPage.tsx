@@ -1,4 +1,3 @@
-import { useState } from "react"
 import AuthForm from "./Login/AuthForm"
 
 export default function AuthPage() {

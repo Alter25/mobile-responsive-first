@@ -21,7 +21,7 @@ export default function NavBarProduct() {
 		setSearch(value);
 	}
 
-	const { logged } = useStore();
+	const isLogged = useStore(s => s.isLogged);
 	return <nav className=" w-full flex justify-end p-4 mt-4 mr-4">
 		<div className="flex w-full justify-start ml-4 items-center">
 			<label htmlFor="buscar">Buscar Producto: </label>
@@ -32,12 +32,12 @@ export default function NavBarProduct() {
 				<MenubarTrigger><FiEdit /></MenubarTrigger>
 				<MenubarContent>
 					<MenubarGroup>
-						<MenubarItem onClick={() => open(null)} className="hover:bg-violet-500" disabled={!logged}>
+						<MenubarItem onClick={() => open(null)} className="hover:bg-violet-500" disabled={!isLogged}>
 							Agregar Producto
 						</MenubarItem>
 					</MenubarGroup>
 					<MenubarGroup>
-						<MenubarItem className="hover:bg-violet-500" disabled={!logged}>
+						<MenubarItem className="hover:bg-violet-500" disabled={!isLogged}>
 							Editar Existente
 						</MenubarItem>
 					</MenubarGroup>
