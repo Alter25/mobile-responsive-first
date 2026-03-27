@@ -110,11 +110,11 @@ export default function AuthForm() {
                 logged === true ?
                   <div className="mt-2 py-4">
                     <span className="mb-2 mr-4">No tienes cuenta?</span>
-                    <button className="hover:underline hover:cursor-pointer shadow-4xl shadow-blue-900" onClick={switchLogged}>Registrate!</button>
+                    <button className="hover:scale-[110%] hover:cursor-pointer border-b border-indigo-700 shadow-4xl shadow-blue-900" onClick={switchLogged}>Registrate!</button>
                   </div> :
                   <div className="mt-2 py-4">
                     <span className="mb-2 mr-4">Tienes cuenta?</span>
-                    <button className="hover:underline hover:cursor-pointer shadow-4xl shadow-blue-900" onClick={switchLogged}>Ingresa!</button>
+                    <button className="hover:scale-[110%] hover:cursor-pointer border-b border-indigo-700 shadow-4xl shadow-blue-900" onClick={switchLogged}>Ingresa!</button>
                   </div>
               }
             </div>
