@@ -1,8 +1,17 @@
 import NavbarButton from "./NavbarButton";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import { useStore } from "@/lib/store/useStore";
+import { FaRegUserCircle } from "react-icons/fa";
+import { logout } from "@/services/authServices";
 
 export const Header = () => {
+  const isLogged = useStore(s => s.isLogged);
+  const shiftLogged = useStore(s => s.shiftLogged);
+  const handleLogout = () => {
+    logout();
+    shiftLogged();
+  }
   return (
     <header className=" mx-auto shadow-2xl rounded-2xl px-2 py-3 sm:px-2 flex w-full bg-white z-10 max-w-screen-2xl">
       <div className="w-full">
@@ -22,7 +31,13 @@ export const Header = () => {
             </nav>
           </div>
           <div className="hidden items-end md:flex">
-            <Button><Link to="/Login">Login</Link></Button>
+            {
+              isLogged === true ? <div className="flex items-center">
+                <FaRegUserCircle size={32} className="mr-2" />
+                <Button onClick={handleLogout}>Logout</Button>
+              </div> :
+                <Button><Link to="/Login">Login</Link></Button>
+            }
           </div>
         </div>
       </div>

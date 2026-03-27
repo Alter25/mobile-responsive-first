@@ -103,7 +103,7 @@ export default function AuthForm() {
                 <Checkbox id="keepsigned" />
                 <FieldLabel htmlFor="keepsigned" className="text-black">Mantener iniciada la sesion</FieldLabel>
               </div>
-              <Button className="mt-4" disabled={handleDisableButton()} onClick={handlePostAction}>Ingresar</Button>
+              <Button className="mt-4" disabled={handleDisableButton()} onClick={handlePostAction}>{logged === false ? "Registrar" : "Ingresar"}</Button>
             </div>
             <div>
               {
