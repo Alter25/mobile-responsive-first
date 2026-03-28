@@ -34,7 +34,7 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+      <div className="max-w-7xl mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
         <p>© 2026 Emma Store. Todos los derechos reservados.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-blue-400 transition-colors">Facebook</a>
