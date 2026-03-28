@@ -5,17 +5,18 @@ import { useStore } from "@/lib/store/useStore"
 
 export default function ListaProductos({ lista }: { lista?: ProductsType[] }) {
   const search = useStore(state => state.search);
+  console.log(lista);
 
   return search === "" ? <section className="flex flex-col items-center justify-center sm:gap-8 sm:flex-row sm:flex-wrap">
     {
-      lista?.map(producto => {
-        return <ProductCard item={producto} />
+      lista?.map((producto, i) => {
+        return <ProductCard key={i} item={producto} />
       })
     }
   </section> : <section className="flex flex-col items-center justify-center sm:gap-8 sm:flex-row sm:flex-wrap">
     {
-      lista?.map(p => {
-        return p.name.includes(search) && <ProductCard item={p} />
+      lista?.map((p, i) => {
+        return p.name.includes(search) && <ProductCard key={i} item={p} />
       })
     }
   </section>

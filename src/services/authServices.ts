@@ -2,6 +2,7 @@ import { apiFetch } from "@/api/client";
 import type { Token, UserCreate, UserResponse } from "../types/Types";
 
 
+
 export async function register(data: UserCreate): Promise<UserResponse>{
   return apiFetch<UserResponse>("/users/", {
     method: "POST",

@@ -6,6 +6,7 @@ import type { ProductsType } from "@/types/Types";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { useProductsStore } from "@/lib/store/useProducsStore";
+import { createProduct } from "@/services/productServices";
 
 interface Props {
   className?: string;
@@ -48,6 +49,8 @@ export default function ProductModal({ className, item = null }: Props) {
       descripcion
     }
     addProduct(p);
+    createProduct(p)
+    close();
   }
 
   return <Portal>
